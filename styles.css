@@ -2,8 +2,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Lemon&display=swap');
 
 :root {
-    --laranja-claro: #81afda;
- }
+    --laranja-claro: #1d7ba7;
+    --alto-contraste-fundo: #263d49;
+    --alto-contraste-texto: #dfdfdf;
+    --alto-contraste-link: #224d61fb;
+}
 
 body {
     font-size: 1rem;
@@ -21,7 +24,7 @@ section {
 
 
 .nav-link {
-    color: #CB6D43;
+    color: #3588cc;
     font-weight: 600;
 }
 
@@ -61,7 +64,9 @@ section {
     border-radius: 30px;
     border: none;
     width: 14em;
+    /* Convertido para em aumenta o tamanho da fonte por tabela*/
     height: 3em;
+    /* Convertido para em */
     align-content: center;
 
 }
@@ -76,8 +81,8 @@ section {
     padding-top: 5rem;
     margin-top: 3rem;
     margin-bottom: 3rem;
-    background: url('img/One_Direction_\(6927584172\).jpg') top right no-repeat,
-        url('img/One_Direction_\(6927584172\).jpg') bottom left no-repeat;
+    background: url('img/lohg.png') top right no-repeat,
+        url('img/lohg.png') bottom left no-repeat;
     background-size: 180px 180px;
     /* Ajuste o tamanho conforme necessário */
 }
@@ -100,17 +105,17 @@ h2 {
 }
 
 #galeria {
-    background-color: #FAF4F4;
+    background-color: #ffffff;
 
 }
 
 .fundo-galeria {
-    background: url('i') bottom right no-repeat;
+    background: url('') bottom right no-repeat;
     background-size: 180px 180px;
 }
 
 #contato {
-    background-image: url('img/one-direction-gruppa-garri.jpg');
+    background-image: url('img/van-di-one-direction-zayn.jpg');
     background-size: cover;
     padding: 4rem 0;
     /* Espaçamento interno para a seção de contato */
@@ -123,20 +128,22 @@ h2 {
     /* Espaçamento interno dentro do formulário */
     border-radius: 10px;
     /* Borda arredondada para o formulário */
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 10px rgba(221, 209, 38, 0.1);
     /* Sombra suave para destacar o formulário */
     font-weight: bold;
 }
 
 .formulario button {
-    background-color: #CB6D43;
+    background-color: #215a7a;
     border: none;
     font-weight: bold;
 }
 
+/* chama classe do bootstrap para modificar a cor */
 .form-control {
-    background-color: #F1EDEF;
+    background-color: #ffffff;
 }
+
 .menu-acessibilidade{
     position: fixed;
     top:2rem;
@@ -159,4 +166,38 @@ h2 {
 }
 .apresenta-lista{
     display: none;
+}
+
+.alto-contraste{
+    background-color: var(--alto-contraste-fundo);
+    color: var(--alto-contraste-texto);
+}
+
+.alto-contraste header,
+.alto-contraste footer,
+.alto-contraste .formulario{
+    background-color: var(--alto-contraste-fundo);
+    color: var(--alto-contraste-texto);
+}
+
+.alto-contraste .nav-link{
+    color: var(--alto-contraste-link);
+}
+
+.alto-contraste .botao-inicio,
+.alto-contraste .formulario button,
+.alto-contraste .btn-primary{
+    background-color: var(--alto-contraste-link);
+    color: var(--alto-contraste-fundo)
+}
+
+.alto-contraste #tropicalia {
+    background: none;
+}
+
+.alto-contraste #galeria {
+    background-color: var(--alto-contraste-fundo);
+}
+.alto-contraste .fundo-galeria {
+    background: none;
 }
